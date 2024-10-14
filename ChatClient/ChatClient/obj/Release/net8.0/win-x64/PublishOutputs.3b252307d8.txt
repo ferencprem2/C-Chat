@@ -1,0 +1,5 @@
+/Users/premferenc/Desktop/ClientAppRelease/ChatClient.exe
+/Users/premferenc/Desktop/ClientAppRelease/ChatClient.dll
+/Users/premferenc/Desktop/ClientAppRelease/ChatClient.deps.json
+/Users/premferenc/Desktop/ClientAppRelease/ChatClient.runtimeconfig.json
+/Users/premferenc/Desktop/ClientAppRelease/ChatClient.pdb

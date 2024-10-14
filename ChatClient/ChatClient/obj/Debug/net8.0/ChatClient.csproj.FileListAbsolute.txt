@@ -1,0 +1,15 @@
+/Users/premferenc/Desktop/ChatClient/ChatClient/bin/Debug/net8.0/ChatClient
+/Users/premferenc/Desktop/ChatClient/ChatClient/bin/Debug/net8.0/ChatClient.deps.json
+/Users/premferenc/Desktop/ChatClient/ChatClient/bin/Debug/net8.0/ChatClient.runtimeconfig.json
+/Users/premferenc/Desktop/ChatClient/ChatClient/bin/Debug/net8.0/ChatClient.dll
+/Users/premferenc/Desktop/ChatClient/ChatClient/bin/Debug/net8.0/ChatClient.pdb
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.GeneratedMSBuildEditorConfig.editorconfig
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.AssemblyInfoInputs.cache
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.AssemblyInfo.cs
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.csproj.CoreCompileInputs.cache
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.sourcelink.json
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.dll
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/refint/ChatClient.dll
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.pdb
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ChatClient.genruntimeconfig.cache
+/Users/premferenc/Desktop/ChatClient/ChatClient/obj/Debug/net8.0/ref/ChatClient.dll
