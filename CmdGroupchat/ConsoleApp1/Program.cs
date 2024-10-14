@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
@@ -6,28 +6,39 @@ namespace ConsoleApp1;
 
 class Program
 {
-    static TcpClient tcpClient;
     static TcpListener tcpListener;
+    static List<TcpClient> clients = new List<TcpClient>();
+    static object lockObject = new object();
     
     static void Main(string[] args)
     {
         tcpListener = new TcpListener(IPAddress.Any, 1010);
         tcpListener.Start();
-        Console.WriteLine("Server started on port: 42069");
+        Console.WriteLine("Server started on port: 1010");
         
-        tcpClient = tcpListener.AcceptTcpClient();
-        Console.WriteLine("Client Connected");
-
-        Thread recieveThread = new Thread(RecieveMessage);
-        Thread sendThread = new Thread(SendMessage);
-        
-        recieveThread.Start();
-        sendThread.Start();
+        Thread acceptClientsThread = new Thread(AcceptClients);
+        acceptClientsThread.Start();
     }
 
-    static void RecieveMessage()
+    static void AcceptClients()
     {
-        NetworkStream stream = tcpClient.GetStream();
+        while (true)
+        {
+            TcpClient newClient = tcpListener.AcceptTcpClient();
+            lock (lockObject)
+            {
+                clients.Add(newClient);
+            }
+            Console.WriteLine("Client Connected");
+
+            Thread clientThread = new Thread(() => HandleClient(newClient));
+            clientThread.Start();
+        }
+    }
+
+    static void HandleClient(TcpClient client)
+    {
+        NetworkStream stream = client.GetStream();
         byte[] buffer = new byte[1024];
         while (true)
         {
@@ -37,27 +48,42 @@ class Program
                 if (bytesRead > 0)
                 {
                     string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
-                    Console.WriteLine($"{message}");
+                    Console.WriteLine($"Client: {message}");
+                    BroadcastMessage(message, client);
                 }
             }
             catch (Exception e)
             {
                 Console.WriteLine("Client Disconnected");
-                throw;
+                lock (lockObject)
+                {
+                    clients.Remove(client);
+                }
+                break;
             }
         }
     }
 
-    static void SendMessage()
+    static void BroadcastMessage(string message, TcpClient senderClient)
     {
-        NetworkStream stream = tcpClient.GetStream();
-        while (true)
+        byte[] buffer = Encoding.UTF8.GetBytes(message);
+        lock (lockObject)
         {
-            string message = Console.ReadLine();
-            byte[] buffer = Encoding.UTF8.GetBytes(message);
-            Console.WriteLine($"Server: {message}");
-            stream.Write(buffer, 0, buffer.Length);
+            foreach (var client in clients)
+            {
+                if (client != senderClient)
+                {
+                    try
+                    {
+                        NetworkStream stream = client.GetStream();
+                        stream.Write(buffer, 0, buffer.Length);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("Error sending message to a client: " + e.Message);
+                    }
+                }
+            }
         }
     }
-
 }
