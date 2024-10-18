@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConsoleApp1
-build_property.ProjectDir = /Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/
+build_property.ProjectDir = C:\Users\prem.ferenc\Desktop\C-Chat\CmdGroupchat\ConsoleApp1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -72,7 +72,7 @@ class Program
             foreach (var client in clients)
             {
                 if (client != senderClient)
-                {
+                { 
                     try
                     {
                         NetworkStream stream = client.GetStream();

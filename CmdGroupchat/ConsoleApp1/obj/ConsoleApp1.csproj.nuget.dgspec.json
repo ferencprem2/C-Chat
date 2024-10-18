@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/ConsoleApp1.csproj": {}
+    "C:\\Users\\prem.ferenc\\Desktop\\C-Chat\\CmdGroupchat\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "/Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/ConsoleApp1.csproj": {
+    "C:\\Users\\prem.ferenc\\Desktop\\C-Chat\\CmdGroupchat\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\Users\\prem.ferenc\\Desktop\\C-Chat\\CmdGroupchat\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "/Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/ConsoleApp1.csproj",
-        "packagesPath": "/Users/premferenc/.nuget/packages/",
-        "outputPath": "/Users/premferenc/Desktop/CmdGroupchat/ConsoleApp1/obj/",
+        "projectPath": "C:\\Users\\prem.ferenc\\Desktop\\C-Chat\\CmdGroupchat\\ConsoleApp1\\ConsoleApp1.csproj",
+        "packagesPath": "C:\\Users\\prem.ferenc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\prem.ferenc\\Desktop\\C-Chat\\CmdGroupchat\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/premferenc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\prem.ferenc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
